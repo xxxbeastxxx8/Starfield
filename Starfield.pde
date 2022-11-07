@@ -32,6 +32,14 @@ class Particle
     mySpeed = (Math.random()*11);
     myColor = color(245,161,72);
   }
+  void move() {
+    myX += Math.cos(myAngle)*mySpeed/2;
+    myY += Math.sin(myAngle)*mySpeed/2;
+    if (myY < 0 || myX < 0 || myY > 1000 || myX > 1000){
+      myX = 500;
+      myY = 300;
+    }
+}
 }
   Particle[] p;
  
